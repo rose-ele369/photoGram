@@ -1,3 +1,126 @@
-body {
-  background-color: #f3d3d3;
+/* login.component.css */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap');
+
+.login-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a una nueva línea en pantallas pequeñas */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center-image {
+  flex: 1;
+  text-align: center;
+}
+
+.center-image img {
+  max-width: 75%;
+  max-height: 75%;
+  border-radius: 5%;
+}
+
+.login-form {
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(5deg, #f3d3d3, #ff9f9c);
+  margin-right: 5%;
+  border-radius: 5%;
+  text-align: center;
+  height: 50%;
+}
+
+.form-group{
+  margin: 2%;
+
+}
+
+.app-title {
+  margin-top: 0; /* Elimina el margen superior predeterminado del h2 */
+  font-size: 1.5em; /* Tamaño de fuente para el título de la aplicación */
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .login-container {
+    flex-direction: column; /* Cambia a diseño de columna en pantallas pequeñas */
+    align-items: stretch;
+  }
+
+  .center-image,
+  .login-form {
+    flex: none; /* Restablece el crecimiento flexible para que no ocupen todo el ancho */
+  }
+
+  .login-form {
+    margin-top: 20%; /* Espaciado superior para separar la imagen y el formulario en pantallas pequeñas */
+  }
+}
+
+/* styles.css */
+
+/* Estilos generales para los campos de entrada */
+input {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+/* Estilos específicos para el campo de usuario */
+#boton {
+  border: 2px solid #ff9f9c; /* Borde rosa melón */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo adicional para el texto del marcador de posición */
+::placeholder {
+  color: #8e7979; /* Color gris claro para el texto del marcador de posición */
+}
+
+.forgot-password {
+  margin-top: 10px; /* Ajusta la separación según tus preferencias */
+  text-align: right;
+  color: #b05a5a; /* Color del texto */
+}
+
+/* Estilos para las líneas horizontales y "O" */
+.separator {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Ajusta la separación según tus preferencias */
+}
+
+hr {
+  flex-grow: 1;
+  //height: 1px;
+  background-color: #af6161; /* Color de las líneas horizontales */
+}
+
+.circle {
+  margin: 0 10px; /* Ajusta el margen según tus preferencias */
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Ajusta la separación según tus preferencias */
+}
+
+/* Estilos para los botones de Facebook y Google */
+.facebook-button,
+.google-button {
+  background-color: #3b5998; /* Color de Facebook */
+  color: #fff; /* Color del texto */
+  padding: 10px;
+  margin-bottom: 10px; /* Ajusta el margen entre los botones */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.google-button {
+  background-color: #db4437; /* Color de Google */
 }
